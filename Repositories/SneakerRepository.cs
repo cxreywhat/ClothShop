@@ -22,7 +22,7 @@ namespace ClothShop.Repositories
         public async Task<Sneaker?> GetSneakerByIdAsync(int id)
         {
             var sneaker = await context.Sneakers.FindAsync(id);
-            if(sneaker is null)
+            if(sneaker == null)
             {
                 return null;
             } 
@@ -31,7 +31,7 @@ namespace ClothShop.Repositories
         }
         public async Task<bool> CreateSneakerAsync(Sneaker sneaker)
         {
-            if (sneaker is null) 
+            if (sneaker == null) 
             {
                 return false;
             }
@@ -46,7 +46,7 @@ namespace ClothShop.Repositories
         {
             var sneaker = await context.Sneakers.FindAsync(id);
 
-            if(sneaker is null)
+            if(sneaker == null)
             {
                 return false;
             }
